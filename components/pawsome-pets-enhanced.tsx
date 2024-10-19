@@ -4,8 +4,6 @@ import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FaDog,
-  FaCat,
   FaSearch,
   FaShoppingCart,
   FaPaw,
@@ -20,14 +18,13 @@ import {
   FaHeart,
   FaUser,
   FaSignOutAlt,
-  FaBox,
-  FaGift,
   FaUserShield,
   FaCheck,
   FaTimes,
   FaStore,
 } from 'react-icons/fa';
 import { Dialog } from '@headlessui/react';
+import Image from 'next/image';
 
 const PawsomePetsEnhanced: React.FC = () => {
   const [activeTab, setActiveTab] = useState('shop');
@@ -522,9 +519,11 @@ const PawsomePetsEnhanced: React.FC = () => {
                   whileHover={{ scale: 1.03 }}
                   className="bg-white rounded-lg shadow-md overflow-hidden"
                 >
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
+                    width={300}
+                    height={200}
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-4">
@@ -931,9 +930,11 @@ const PawsomePetsEnhanced: React.FC = () => {
                 <Dialog.Title className="text-lg font-medium leading-6 text-gray-900 mb-2">
                   {selectedProduct.name}
                 </Dialog.Title>
-                <img
+                <Image
                   src={selectedProduct.image}
                   alt={selectedProduct.name}
+                  width={300}
+                  height={200}
                   className="w-full h-48 object-cover mb-4 rounded"
                 />
                 <p className="text-sm text-gray-500 mb-2">
