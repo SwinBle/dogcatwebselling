@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHeart, FaStar } from 'react-icons/fa';
+import Image from 'next/image';
 
 const ProductCard = ({ product, toggleWishlist, addToCart }) => {
   return (
@@ -8,7 +9,13 @@ const ProductCard = ({ product, toggleWishlist, addToCart }) => {
       whileHover={{ scale: 1.03 }}
       className="bg-white rounded-lg shadow-md overflow-hidden"
     >
-      <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
+      <Image
+        src={product.image}
+        alt={product.name}
+        width={300}
+        height={200}
+        className="w-full h-48 object-cover"
+      />
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-xl font-semibold">{product.name}</h3>
