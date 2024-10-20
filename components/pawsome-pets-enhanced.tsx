@@ -1110,7 +1110,7 @@ const PawsomePetsEnhanced: React.FC = () => {
               Loyalty Program
             </Dialog.Title>
             <p className="mb-4">
-              Congratulations! You've earned loyalty points on your purchase.
+              Congratulations! You&apos;ve earned loyalty points on your purchase.
             </p>
             <p className="text-2xl font-bold mb-4">
               Current Points: {loyaltyPoints}
